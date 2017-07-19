@@ -249,8 +249,10 @@ public class CallbackManager
 						}
 						else if (ev instanceof DeliveryReportCallbackEvent)
 						{
+							logger.info("instance of delivery");
 							if (CallbackManager.this.deliveryReportCallback != null)
 							{
+								logger.info("call back not null");
 								try
 								{
 									handlerFound = true;

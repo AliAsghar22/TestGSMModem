@@ -7,9 +7,9 @@ import org.smslib.message.OutboundMessage;
 /**
  * Created by Ali Asghar on 17/07/2017.
  */
-public class Main {
+public class TestSerialModem {
     public static void main(String[] args) throws Exception {
-        final Logger logger = LoggerFactory.getLogger(Main.class);
+        final Logger logger = LoggerFactory.getLogger(TestSerialModem.class);
         // Add a couple of callbacks.
 //        Service.getInstance().setInboundMessageCallback(new InboundMessageCallback());
 //        Service.getInstance().setMessageSentCallback(new MessageSentCallback());
@@ -21,7 +21,7 @@ public class Main {
             Service.getInstance().start();
             // Define and register a modem.
             // TODO: Check the PINs and the SMSC number in the line below!
-            Modem modemGateway = new Modem("modem", "COM7", 115200, "", "", new org.smslib.message.MsIsdn(""), "");
+            Modem modemGateway = new Modem("modem", "ttyUSB1", 115200, "", "", new org.smslib.message.MsIsdn(""), "");
             Service.getInstance().registerGateway(modemGateway);
             // Sleep for a minute, simulating the asynchronous concept.
             // Inbound messages will activate your InboundMessageCallback method.

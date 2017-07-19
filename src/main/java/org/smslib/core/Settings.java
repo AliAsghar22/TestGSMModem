@@ -35,7 +35,7 @@ public class Settings
 
 	public static int hoursToRetainOrphanedMessageParts = 72;
 
-	public static boolean deleteMessagesAfterCallback = false;
+	public static boolean deleteMessagesAfterCallback = true;
 
 	public static void loadSettings()
 	{
